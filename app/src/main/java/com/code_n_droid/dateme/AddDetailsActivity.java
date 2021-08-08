@@ -25,7 +25,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 
-public class AddDetailsActivity extends AppCompatActivity implements LocationListener {
+public class AddDetailsActivity extends AppCompatActivity{
 
     public static final String EMAIL_KEY = "email";
     public static final String PASSWORD_KEY = "password";
@@ -55,15 +55,13 @@ public class AddDetailsActivity extends AppCompatActivity implements LocationLis
 
         email = getIntent().getStringExtra(EMAIL_KEY);
         password = getIntent().getStringExtra(PASSWORD_KEY);
-//        photos.addAll(getIntent().getStringArrayListExtra(PHOTOS_KEY));
+        photos.addAll(getIntent().getStringArrayListExtra(PHOTOS_KEY));
 
         findViewById(R.id.submitButton).setOnClickListener(view -> {
             uploadData();
         });
 
         firestore = FirebaseFirestore.getInstance();
-
-        getLocation();
     }
 
     private void uploadData() {
@@ -129,66 +127,5 @@ public class AddDetailsActivity extends AppCompatActivity implements LocationLis
         return user;
     }
 
-    /* Retrieve Location */
 
-    public void getLocation(){
-
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-                == PackageManager.PERMISSION_GRANTED){
-            retrieveLocation();
-        }else{
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 200);
-
-        }
-    }
-
-    @SuppressLint("MissingPermission")
-    private void retrieveLocation() {
-        ProgressDialog pd = new ProgressDialog(this);
-        pd.setMessage("Getting location");
-        pd.show();
-
-        LocationManager manager=(LocationManager)getSystemService(LOCATION_SERVICE);
-
-        manager.requestLocationUpdates(LocationManager.GPS_PROVIDER,5000, 5, this);
-        Location location = manager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-
-        if(location!=null) {
-            lat = location.getLatitude();
-            longitude = location.getLongitude();
-
-            Toast.makeText(this,longitude+""+lat, Toast.LENGTH_SHORT).show();
-
-            Geocoder geocoder = new Geocoder(this, Locale.getDefault());
-
-            try {
-
-                List<Address> addressList = geocoder.getFromLocation(lat, longitude, 1);
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }finally {
-                pd.dismiss();
-            }
-        }
-        pd.dismiss();
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-        if(requestCode==200 && grantResults[0]==PackageManager.PERMISSION_GRANTED){
-            retrieveLocation();
-        }else {
-            Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
-        }
-
-    }
-
-
-    @Override
-    public void onLocationChanged(@NonNull Location location) {
-
-    }
 }
