@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddDetailsActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:fontFamily="@font/round"
+        android:text="@string/set_up_profile"
+        android:textColor="@color/pink_A100"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="20dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/submitButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <RadioGroup
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:checkedButton="@id/male"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:background="@android:color/transparent"
+                    android:button="@android:color/transparent"
+                    android:drawableTop="@drawable/ic_male"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/round"
+                    android:gravity="center_horizontal"
+                    android:text="@string/male"
+                    android:textColor="@color/gray_pink" />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:background="@android:color/transparent"
+                    android:button="@android:color/transparent"
+                    android:drawableTop="@drawable/ic_female"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/round"
+                    android:gravity="center_horizontal"
+                    android:text="@string/female"
+                    android:textColor="@color/gray_pink" />
+
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/nameField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:autofillHints="no"
+                android:background="@drawable/edit_text_bag"
+                android:drawableEnd="@drawable/ic_person"
+                android:drawableRight="@drawable/ic_person"
+                android:fontFamily="@font/round"
+                android:hint="@string/name"
+                android:inputType="textPersonName"
+                android:paddingVertical="13dp"
+                android:paddingStart="30dp"
+                android:paddingLeft="30dp"
+                android:paddingEnd="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/ageField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints="no"
+                android:background="@drawable/edit_text_bag"
+                android:drawableEnd="@drawable/ic_calender"
+                android:drawableRight="@drawable/ic_calender"
+                android:fontFamily="@font/round"
+                android:hint="@string/age"
+                android:inputType="number"
+                android:paddingVertical="13dp"
+                android:paddingStart="30dp"
+                android:paddingLeft="30dp"
+                android:paddingEnd="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/bioField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:autofillHints="no"
+                android:background="@drawable/edit_text_bag"
+                android:fontFamily="@font/round"
+                android:gravity="top"
+                android:hint="@string/bio"
+                android:maxLines="4"
+                android:minLines="4"
+                android:paddingVertical="13dp"
+                android:paddingStart="30dp"
+                android:paddingLeft="30dp"
+                android:paddingEnd="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/round"
+                android:text="@string/hobbies"
+                android:textSize="20sp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/hobbies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                >
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/magic"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/magic"
+                    app:textEndPadding="10dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/dance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:text="@string/dance"
+                    app:iconStartPadding="10dp"
+                    app:textEndPadding="10dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/singing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:text="@string/singing"
+                    app:iconStartPadding="10dp"
+                    app:textEndPadding="10dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/painting"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/painting"
+                    app:iconStartPadding="10dp"
+                    app:textEndPadding="10dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/acting"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/acting"
+                    app:iconStartPadding="10dp"
+                    app:textEndPadding="10dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/sports"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sports"
+                    app:iconStartPadding="10dp"
+                    app:textEndPadding="10dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/adventure"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/adventure"
+                    app:iconStartPadding="10dp"
+                    app:textEndPadding="10dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/writing"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/writing"
+                    app:iconStartPadding="10dp"
+                    app:textEndPadding="10dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/travel"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/travel"
+                    app:iconStartPadding="10dp"
+                    app:textEndPadding="10dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/reading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:text="@string/reading"
+                    app:iconStartPadding="10dp"
+                    app:textEndPadding="10dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/blogging"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:text="@string/blogging"
+                    app:iconStartPadding="10dp"
+                    app:textEndPadding="10dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:text="@string/music"
+                    app:iconStartPadding="10dp"
+                    app:textEndPadding="10dp" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/round"
+        android:paddingVertical="12dp"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/pink_A200"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

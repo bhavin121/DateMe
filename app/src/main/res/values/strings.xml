@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">DateMe</string>
+    <string name="log_in_with_google">Log In with Google</string>
+    <string name="dateme">DateMe</string>
+    <string name="connect_with_peoples">Connect with peoples</string>
+    <string name="log_in">Log In</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="new_user_si">New User? <font color="#FF4081">Sign Up</font></string>
+    <string name="login_que">Have Account? <font color="#FF4081">Log In</font></string>
+    <string name="or">Or</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up_with_google">Sign Up with Google</string>
+    <string name="gender">Gender</string>
+    <string name="set_up_profile">Set Up Profile</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="submit">Submit</string>
+    <string name="bio">Bio</string>
+    <string name="upload">Upload</string>
+    <string name="no_image">No<br />Image<br />Added</string>
+    <string name="add_photos">Add Photos</string>
+    <string name="pick_a_photo">Pick a photo</string>
+    <string name="choose">Choose</string>
+    <string name="chosen_photos">Chosen Photos</string>
+    <string name="next">Next</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="home">Home</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="music">Music</string>
+    <string name="magic">Magic</string>
+    <string name="dance">Dance</string>
+    <string name="singing">Singing</string>
+    <string name="painting">Painting</string>
+    <string name="acting">Acting</string>
+    <string name="sports">Sports</string>
+    <string name="adventure">Adventure</string>
+    <string name="writing">Writing</string>
+    <string name="travel">Travel</string>
+    <string name="reading">Reading</string>
+    <string name="blogging">Blogging</string>
+    <string name="likes">Likes</string>
+    <string name="find">Find</string>
+    <string name="filter">Filter</string>
+    <string name="profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="interested">Interested</string>
+    <string name="bhavin_22">Bhavin, 22</string>
+    <string name="pindwara_rajasthan">Pindwara, Rajasthan</string>
+    <string name="apply_filters">Apply Filters</string>
+    <string name="starting">Starting</string>
+    <string name="end">End</string>
+    <string name="find_friends">Find Friends</string>
+    <string name="who_likes_you">Who Likes You</string>
+</resources>
