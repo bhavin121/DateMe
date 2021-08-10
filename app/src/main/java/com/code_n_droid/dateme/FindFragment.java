@@ -18,7 +18,11 @@ import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 
+import java.util.List;
+
 public class FindFragment extends Fragment {
+
+//    private List<User>
 
     public FindFragment() {
         // Required empty public constructor
